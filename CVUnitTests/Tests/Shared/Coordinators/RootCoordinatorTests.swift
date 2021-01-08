@@ -14,7 +14,10 @@ class RootCoordinatorTests: XCTestCase {
         let coordinator = RootCoordinator(container: mockContainer, appContext: MockAppContext())
         
         XCTAssertNil(mockContainer.displayedViewController)
+        XCTAssertTrue(coordinator.childCoordinators.isEmpty)
+        
         coordinator.start()
         XCTAssertNotNil(mockContainer.displayedViewController)
+        XCTAssertFalse(coordinator.childCoordinators.isEmpty)
     }
 }

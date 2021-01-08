@@ -14,8 +14,12 @@
 		7727265125A8D5C60037F4A0 /* RootCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7727265025A8D5C60037F4A0 /* RootCoordinatorTests.swift */; };
 		7727265825A8D7B50037F4A0 /* MockDisplayContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7727265725A8D7B50037F4A0 /* MockDisplayContainer.swift */; };
 		7727266025A8D9300037F4A0 /* MockAppContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7727265F25A8D9300037F4A0 /* MockAppContext.swift */; };
+		7727266A25A8DCE00037F4A0 /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7727266925A8DCE00037F4A0 /* SplitViewController.swift */; };
+		7727266E25A8E2860037F4A0 /* ChildVCContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7727266D25A8E2860037F4A0 /* ChildVCContainer.swift */; };
+		7727267625A8E3550037F4A0 /* MenuCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7727267525A8E3550037F4A0 /* MenuCoordinator.swift */; };
+		7727267A25A8E3C00037F4A0 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7727267925A8E3C00037F4A0 /* MenuViewController.swift */; };
+		7727268025A8E9FF0037F4A0 /* MenuCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7727267F25A8E9FF0037F4A0 /* MenuCoordinatorTests.swift */; };
 		7748DD2A25A8B9300022515E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7748DD2925A8B9300022515E /* AppDelegate.swift */; };
-		7748DD2E25A8B9300022515E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7748DD2D25A8B9300022515E /* ViewController.swift */; };
 		7748DD3425A8B9300022515E /* CV.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7748DD3225A8B9300022515E /* CV.xcdatamodeld */; };
 		7748DD3625A8B9300022515E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7748DD3525A8B9300022515E /* Assets.xcassets */; };
 		7748DD3925A8B9300022515E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7748DD3725A8B9300022515E /* LaunchScreen.storyboard */; };
@@ -44,9 +48,13 @@
 		7727265025A8D5C60037F4A0 /* RootCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinatorTests.swift; sourceTree = "<group>"; };
 		7727265725A8D7B50037F4A0 /* MockDisplayContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDisplayContainer.swift; sourceTree = "<group>"; };
 		7727265F25A8D9300037F4A0 /* MockAppContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAppContext.swift; sourceTree = "<group>"; };
+		7727266925A8DCE00037F4A0 /* SplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
+		7727266D25A8E2860037F4A0 /* ChildVCContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildVCContainer.swift; sourceTree = "<group>"; };
+		7727267525A8E3550037F4A0 /* MenuCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCoordinator.swift; sourceTree = "<group>"; };
+		7727267925A8E3C00037F4A0 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		7727267F25A8E9FF0037F4A0 /* MenuCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCoordinatorTests.swift; sourceTree = "<group>"; };
 		7748DD2625A8B9300022515E /* CV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7748DD2925A8B9300022515E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7748DD2D25A8B9300022515E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7748DD3325A8B9300022515E /* CV.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CV.xcdatamodel; sourceTree = "<group>"; };
 		7748DD3525A8B9300022515E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7748DD3825A8B9300022515E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -156,9 +164,44 @@
 		7727266325A8DAA70037F4A0 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				7727267D25A8E9EC0037F4A0 /* Content */,
 				7727264E25A8D5B40037F4A0 /* Shared */,
 			);
 			path = Tests;
+			sourceTree = "<group>";
+		};
+		7727266825A8DCCF0037F4A0 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				7727266925A8DCE00037F4A0 /* SplitViewController.swift */,
+				7727266D25A8E2860037F4A0 /* ChildVCContainer.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		7727267325A8E32F0037F4A0 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				7727267525A8E3550037F4A0 /* MenuCoordinator.swift */,
+				7727267925A8E3C00037F4A0 /* MenuViewController.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		7727267D25A8E9EC0037F4A0 /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				7727267E25A8E9F40037F4A0 /* Menu */,
+			);
+			path = Content;
+			sourceTree = "<group>";
+		};
+		7727267E25A8E9F40037F4A0 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				7727267F25A8E9FF0037F4A0 /* MenuCoordinatorTests.swift */,
+			);
+			path = Menu;
 			sourceTree = "<group>";
 		};
 		7748DD1D25A8B9300022515E = {
@@ -203,6 +246,7 @@
 		7748DD4725A8C7340022515E /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				7727266825A8DCCF0037F4A0 /* UI */,
 				7727262F25A8CE770037F4A0 /* AppContext */,
 				7748DD5125A8C9370022515E /* Coordinators */,
 				7748DD4825A8C73E0022515E /* Protocols */,
@@ -222,7 +266,7 @@
 		7748DD4925A8C7470022515E /* Content */ = {
 			isa = PBXGroup;
 			children = (
-				7748DD2D25A8B9300022515E /* ViewController.swift */,
+				7727267325A8E32F0037F4A0 /* Menu */,
 			);
 			path = Content;
 			sourceTree = "<group>";
@@ -335,6 +379,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7727265125A8D5C60037F4A0 /* RootCoordinatorTests.swift in Sources */,
+				7727268025A8E9FF0037F4A0 /* MenuCoordinatorTests.swift in Sources */,
 				7727266025A8D9300037F4A0 /* MockAppContext.swift in Sources */,
 				7727265825A8D7B50037F4A0 /* MockDisplayContainer.swift in Sources */,
 			);
@@ -345,11 +390,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				7748DD4B25A8C75D0022515E /* Coordinator.swift in Sources */,
+				7727267625A8E3550037F4A0 /* MenuCoordinator.swift in Sources */,
+				7727266E25A8E2860037F4A0 /* ChildVCContainer.swift in Sources */,
 				7727263B25A8D00C0037F4A0 /* AppContext+CoreDataProvider.swift in Sources */,
+				7727266A25A8DCE00037F4A0 /* SplitViewController.swift in Sources */,
 				7748DD4F25A8C8F00022515E /* AppContext.swift in Sources */,
 				7727262D25A8CDFB0037F4A0 /* DisplayContainer.swift in Sources */,
+				7727267A25A8E3C00037F4A0 /* MenuViewController.swift in Sources */,
 				7748DD3425A8B9300022515E /* CV.xcdatamodeld in Sources */,
-				7748DD2E25A8B9300022515E /* ViewController.swift in Sources */,
 				7748DD5325A8C9470022515E /* RootCoordinator.swift in Sources */,
 				7748DD2A25A8B9300022515E /* AppDelegate.swift in Sources */,
 				7727263625A8CF060037F4A0 /* CoreDataService.swift in Sources */,

@@ -18,6 +18,11 @@ class RootCoordinator: AppCoordinator {
     }
     
     func start() {
-        displayContainer?.display(ViewController())
+        let splitViewContainer = SplitViewController()
+        displayContainer?.display(splitViewContainer)
+        
+        let menu = MenuCoordinator(appContext: appContext, container: splitViewContainer.primaryDisplay)
+        menu.start()
+        childCoordinators.append(menu)
     }
 }

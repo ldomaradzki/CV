@@ -1,31 +1,14 @@
 //
-//  AppDelegate.swift
+//  CoreDataService.swift
 //  CV
 //
 //  Created by Lukasz Domaradzki on 08/01/2021.
 //
 
-import UIKit
+import Foundation
 import CoreData
 
-@main
-class AppDelegate: UIResponder, UIApplicationDelegate {
-    
-    var window: UIWindow?
-    var mainVC = ViewController()
-    
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
-        let scene = UIApplication.shared.connectedScenes.first as! UIWindowScene
-        window = UIWindow(frame: scene.coordinateSpace.bounds)
-        window?.rootViewController = mainVC
-        window?.makeKeyAndVisible()
-        
-        return true
-    }
-
-    // MARK: - Core Data stack
-
+class CoreDataService {
     lazy var persistentContainer: NSPersistentContainer = {
         /*
          The persistent container for the application. This implementation
@@ -68,6 +51,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
-
 }
-

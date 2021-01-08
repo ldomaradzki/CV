@@ -13,7 +13,9 @@ class SplitViewController: UIViewController {
     lazy var secondaryDisplay = { ChildVCContainer(side: .right, parent: self) }()
     
     override func viewDidLoad() {
-        super.viewDidLoad()   
+        super.viewDidLoad()
+        
+        view.backgroundColor = .white
     }
     
     override var prefersStatusBarHidden: Bool {

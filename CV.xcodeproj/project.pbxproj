@@ -26,6 +26,9 @@
 		7748DD4B25A8C75D0022515E /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7748DD4A25A8C75D0022515E /* Coordinator.swift */; };
 		7748DD4F25A8C8F00022515E /* AppContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7748DD4E25A8C8F00022515E /* AppContext.swift */; };
 		7748DD5325A8C9470022515E /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7748DD5225A8C9470022515E /* RootCoordinator.swift */; };
+		77ECB4F825A8F32D00830A82 /* UIColor+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77ECB4F725A8F32D00830A82 /* UIColor+ext.swift */; };
+		77ECB4FD25A8F43200830A82 /* UsesAutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77ECB4FC25A8F43200830A82 /* UsesAutoLayout.swift */; };
+		77ECB50325A8F5B700830A82 /* Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77ECB50225A8F5B700830A82 /* Constraints.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +65,9 @@
 		7748DD4A25A8C75D0022515E /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		7748DD4E25A8C8F00022515E /* AppContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContext.swift; sourceTree = "<group>"; };
 		7748DD5225A8C9470022515E /* RootCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinator.swift; sourceTree = "<group>"; };
+		77ECB4F725A8F32D00830A82 /* UIColor+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+ext.swift"; sourceTree = "<group>"; };
+		77ECB4FC25A8F43200830A82 /* UsesAutoLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsesAutoLayout.swift; sourceTree = "<group>"; };
+		77ECB50225A8F5B700830A82 /* Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constraints.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +181,7 @@
 			children = (
 				7727266925A8DCE00037F4A0 /* SplitViewController.swift */,
 				7727266D25A8E2860037F4A0 /* ChildVCContainer.swift */,
+				77ECB50225A8F5B700830A82 /* Constraints.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -246,6 +253,8 @@
 		7748DD4725A8C7340022515E /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				77ECB4FB25A8F42200830A82 /* PropertyWrappers */,
+				77ECB4F625A8F32000830A82 /* Extensions */,
 				7727266825A8DCCF0037F4A0 /* UI */,
 				7727262F25A8CE770037F4A0 /* AppContext */,
 				7748DD5125A8C9370022515E /* Coordinators */,
@@ -277,6 +286,22 @@
 				7748DD5225A8C9470022515E /* RootCoordinator.swift */,
 			);
 			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		77ECB4F625A8F32000830A82 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				77ECB4F725A8F32D00830A82 /* UIColor+ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		77ECB4FB25A8F42200830A82 /* PropertyWrappers */ = {
+			isa = PBXGroup;
+			children = (
+				77ECB4FC25A8F43200830A82 /* UsesAutoLayout.swift */,
+			);
+			path = PropertyWrappers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -390,10 +415,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				7748DD4B25A8C75D0022515E /* Coordinator.swift in Sources */,
+				77ECB4FD25A8F43200830A82 /* UsesAutoLayout.swift in Sources */,
 				7727267625A8E3550037F4A0 /* MenuCoordinator.swift in Sources */,
 				7727266E25A8E2860037F4A0 /* ChildVCContainer.swift in Sources */,
+				77ECB50325A8F5B700830A82 /* Constraints.swift in Sources */,
 				7727263B25A8D00C0037F4A0 /* AppContext+CoreDataProvider.swift in Sources */,
 				7727266A25A8DCE00037F4A0 /* SplitViewController.swift in Sources */,
+				77ECB4F825A8F32D00830A82 /* UIColor+ext.swift in Sources */,
 				7748DD4F25A8C8F00022515E /* AppContext.swift in Sources */,
 				7727262D25A8CDFB0037F4A0 /* DisplayContainer.swift in Sources */,
 				7727267A25A8E3C00037F4A0 /* MenuViewController.swift in Sources */,

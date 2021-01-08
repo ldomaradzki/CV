@@ -6,15 +6,15 @@
 //
 
 import Foundation
-import UIKit
 
 class RootCoordinator: AppCoordinator {
-    var appContext = AppContext()
+    var appContext: Context
     var childCoordinators: [Coordinator] = []
     var displayContainer: DisplayContainer?
     
-    init(window: UIWindow?) {
-        self.displayContainer = window
+    init(container: DisplayContainer?, appContext: Context) {
+        self.appContext = appContext
+        self.displayContainer = container
     }
     
     func start() {

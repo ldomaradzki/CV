@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     /// Main entry coordinator, initilizes root view controller
     lazy var rootCoordinator: Coordinator? = {
-        RootCoordinator(window: window)
+        RootCoordinator(container: window, appContext: AppContext())
     }()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {

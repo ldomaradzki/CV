@@ -14,5 +14,5 @@ protocol Coordinator {
 }
 
 protocol AppCoordinator: Coordinator {
-    var appContext: AppContext { get set }
+    var appContext: Context { get set }
 }

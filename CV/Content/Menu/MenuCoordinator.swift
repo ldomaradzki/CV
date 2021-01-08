@@ -12,12 +12,16 @@ class MenuCoordinator: AppCoordinator {
     var childCoordinators: [Coordinator] = []
     var container: DisplayContainer
     
+    private let menuViewModel = MenuViewModel()
+    
     init(appContext: Context, container: DisplayContainer) {
         self.appContext = appContext
         self.container = container
     }
     
     func start() {
-        container.display(MenuViewController())
+        let menuViewController = MenuViewController()
+        menuViewController.setup(menuViewModel)
+        container.display(menuViewController)
     }
 }

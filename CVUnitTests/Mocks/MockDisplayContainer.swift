@@ -15,4 +15,8 @@ class MockDisplayContainer: DisplayContainer {
     func display(_ viewController: UIViewController) {
         displayedViewController = viewController
     }
+    
+    func removeViewController() {
+        displayedViewController = nil
+    }
 }

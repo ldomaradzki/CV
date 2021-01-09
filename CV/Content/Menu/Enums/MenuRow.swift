@@ -25,7 +25,7 @@ enum MenuRow: Int, CaseIterable {
     
     func asIcon() -> UIImage {
         switch self {
-        case .about: return UIImage(systemName: "person")!
+            case .about: return UIImage(systemName: "person")!
             case .skills: return UIImage(systemName: "wand.and.stars")!
             case .experience: return UIImage(systemName: "desktopcomputer")!
             case .education: return UIImage(systemName: "rosette")!

@@ -30,6 +30,19 @@
 		7748DD4F25A8C8F00022515E /* AppContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7748DD4E25A8C8F00022515E /* AppContext.swift */; };
 		7748DD5325A8C9470022515E /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7748DD5225A8C9470022515E /* RootCoordinator.swift */; };
 		7770DBAC25A9082A00FE3E66 /* UITableViewCell+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7770DBAB25A9082A00FE3E66 /* UITableViewCell+ext.swift */; };
+		7770DBB125A997D600FE3E66 /* MenuDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7770DBB025A997D600FE3E66 /* MenuDelegate.swift */; };
+		7770DBB825A99A8900FE3E66 /* AboutCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7770DBB725A99A8900FE3E66 /* AboutCoordinator.swift */; };
+		7770DBBD25A99AA800FE3E66 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7770DBBC25A99AA800FE3E66 /* AboutViewController.swift */; };
+		7770DBC425A9AE2000FE3E66 /* SkillsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7770DBC325A9AE2000FE3E66 /* SkillsCoordinator.swift */; };
+		7770DBCB25A9AE3A00FE3E66 /* SkillsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7770DBCA25A9AE3A00FE3E66 /* SkillsViewController.swift */; };
+		7770DBD225A9AFDA00FE3E66 /* ExperienceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7770DBD125A9AFDA00FE3E66 /* ExperienceViewController.swift */; };
+		7770DBD925A9AFFF00FE3E66 /* ExperienceCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7770DBD825A9AFFF00FE3E66 /* ExperienceCoordinator.swift */; };
+		7770DBE125A9B04F00FE3E66 /* EducationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7770DBE025A9B04F00FE3E66 /* EducationCoordinator.swift */; };
+		7770DBE725A9B07200FE3E66 /* EducationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7770DBE625A9B07200FE3E66 /* EducationViewController.swift */; };
+		7770DBEB25A9B1C500FE3E66 /* UIViewController+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7770DBEA25A9B1C500FE3E66 /* UIViewController+ext.swift */; };
+		7770DBF025A9BA2000FE3E66 /* UsesAutoLayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7770DBEF25A9BA2000FE3E66 /* UsesAutoLayoutTests.swift */; };
+		7770DBF925A9BB1D00FE3E66 /* MenuViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7770DBF825A9BB1D00FE3E66 /* MenuViewModelTests.swift */; };
+		7770DBFF25A9BF1F00FE3E66 /* MenuItemViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7770DBFE25A9BF1F00FE3E66 /* MenuItemViewModelTests.swift */; };
 		77ECB4F825A8F32D00830A82 /* UIColor+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77ECB4F725A8F32D00830A82 /* UIColor+ext.swift */; };
 		77ECB4FD25A8F43200830A82 /* UsesAutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77ECB4FC25A8F43200830A82 /* UsesAutoLayout.swift */; };
 		77ECB50325A8F5B700830A82 /* Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77ECB50225A8F5B700830A82 /* Constraints.swift */; };
@@ -75,6 +88,19 @@
 		7748DD4E25A8C8F00022515E /* AppContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContext.swift; sourceTree = "<group>"; };
 		7748DD5225A8C9470022515E /* RootCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinator.swift; sourceTree = "<group>"; };
 		7770DBAB25A9082A00FE3E66 /* UITableViewCell+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+ext.swift"; sourceTree = "<group>"; };
+		7770DBB025A997D600FE3E66 /* MenuDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDelegate.swift; sourceTree = "<group>"; };
+		7770DBB725A99A8900FE3E66 /* AboutCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCoordinator.swift; sourceTree = "<group>"; };
+		7770DBBC25A99AA800FE3E66 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		7770DBC325A9AE2000FE3E66 /* SkillsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsCoordinator.swift; sourceTree = "<group>"; };
+		7770DBCA25A9AE3A00FE3E66 /* SkillsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsViewController.swift; sourceTree = "<group>"; };
+		7770DBD125A9AFDA00FE3E66 /* ExperienceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceViewController.swift; sourceTree = "<group>"; };
+		7770DBD825A9AFFF00FE3E66 /* ExperienceCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceCoordinator.swift; sourceTree = "<group>"; };
+		7770DBE025A9B04F00FE3E66 /* EducationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationCoordinator.swift; sourceTree = "<group>"; };
+		7770DBE625A9B07200FE3E66 /* EducationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationViewController.swift; sourceTree = "<group>"; };
+		7770DBEA25A9B1C500FE3E66 /* UIViewController+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ext.swift"; sourceTree = "<group>"; };
+		7770DBEF25A9BA2000FE3E66 /* UsesAutoLayoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsesAutoLayoutTests.swift; sourceTree = "<group>"; };
+		7770DBF825A9BB1D00FE3E66 /* MenuViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModelTests.swift; sourceTree = "<group>"; };
+		7770DBFE25A9BF1F00FE3E66 /* MenuItemViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemViewModelTests.swift; sourceTree = "<group>"; };
 		77ECB4F725A8F32D00830A82 /* UIColor+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+ext.swift"; sourceTree = "<group>"; };
 		77ECB4FC25A8F43200830A82 /* UsesAutoLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsesAutoLayout.swift; sourceTree = "<group>"; };
 		77ECB50225A8F5B700830A82 /* Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constraints.swift; sourceTree = "<group>"; };
@@ -157,6 +183,7 @@
 		7727264E25A8D5B40037F4A0 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				7770DBEE25A9BA0E00FE3E66 /* PropertyWrappers */,
 				7727264F25A8D5B90037F4A0 /* Coordinators */,
 			);
 			path = Shared;
@@ -202,6 +229,7 @@
 		7727267325A8E32F0037F4A0 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
+				7770DBAF25A997CC00FE3E66 /* Protocols */,
 				772FBBD225A906940056EE0F /* Enums */,
 				772FBBCD25A906620056EE0F /* Views */,
 				77ECB51025A903C400830A82 /* ViewModels */,
@@ -221,6 +249,7 @@
 		7727267E25A8E9F40037F4A0 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
+				7770DBF725A9BB1100FE3E66 /* ViewModels */,
 				7727267F25A8E9FF0037F4A0 /* MenuCoordinatorTests.swift */,
 			);
 			path = Menu;
@@ -307,6 +336,10 @@
 		7748DD4925A8C7470022515E /* Content */ = {
 			isa = PBXGroup;
 			children = (
+				7770DBDE25A9B03D00FE3E66 /* Education */,
+				7770DBD025A9AF1D00FE3E66 /* Experience */,
+				7770DBC225A9AE1100FE3E66 /* Skills */,
+				7770DBB625A99A7B00FE3E66 /* About */,
 				7727267325A8E32F0037F4A0 /* Menu */,
 			);
 			path = Content;
@@ -320,11 +353,105 @@
 			path = Coordinators;
 			sourceTree = "<group>";
 		};
+		7770DBAF25A997CC00FE3E66 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				7770DBB025A997D600FE3E66 /* MenuDelegate.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		7770DBB625A99A7B00FE3E66 /* About */ = {
+			isa = PBXGroup;
+			children = (
+				7770DBBB25A99A9D00FE3E66 /* Views */,
+				7770DBB725A99A8900FE3E66 /* AboutCoordinator.swift */,
+			);
+			path = About;
+			sourceTree = "<group>";
+		};
+		7770DBBB25A99A9D00FE3E66 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7770DBBC25A99AA800FE3E66 /* AboutViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7770DBC225A9AE1100FE3E66 /* Skills */ = {
+			isa = PBXGroup;
+			children = (
+				7770DBC925A9AE3000FE3E66 /* Views */,
+				7770DBC325A9AE2000FE3E66 /* SkillsCoordinator.swift */,
+			);
+			path = Skills;
+			sourceTree = "<group>";
+		};
+		7770DBC925A9AE3000FE3E66 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7770DBCA25A9AE3A00FE3E66 /* SkillsViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7770DBD025A9AF1D00FE3E66 /* Experience */ = {
+			isa = PBXGroup;
+			children = (
+				7770DBD725A9AFF400FE3E66 /* Views */,
+				7770DBD825A9AFFF00FE3E66 /* ExperienceCoordinator.swift */,
+			);
+			path = Experience;
+			sourceTree = "<group>";
+		};
+		7770DBD725A9AFF400FE3E66 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7770DBD125A9AFDA00FE3E66 /* ExperienceViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7770DBDE25A9B03D00FE3E66 /* Education */ = {
+			isa = PBXGroup;
+			children = (
+				7770DBDF25A9B04100FE3E66 /* Views */,
+				7770DBE025A9B04F00FE3E66 /* EducationCoordinator.swift */,
+			);
+			path = Education;
+			sourceTree = "<group>";
+		};
+		7770DBDF25A9B04100FE3E66 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7770DBE625A9B07200FE3E66 /* EducationViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7770DBEE25A9BA0E00FE3E66 /* PropertyWrappers */ = {
+			isa = PBXGroup;
+			children = (
+				7770DBEF25A9BA2000FE3E66 /* UsesAutoLayoutTests.swift */,
+			);
+			path = PropertyWrappers;
+			sourceTree = "<group>";
+		};
+		7770DBF725A9BB1100FE3E66 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				7770DBF825A9BB1D00FE3E66 /* MenuViewModelTests.swift */,
+				7770DBFE25A9BF1F00FE3E66 /* MenuItemViewModelTests.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		77ECB4F625A8F32000830A82 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				77ECB4F725A8F32D00830A82 /* UIColor+ext.swift */,
 				7770DBAB25A9082A00FE3E66 /* UITableViewCell+ext.swift */,
+				7770DBEA25A9B1C500FE3E66 /* UIViewController+ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -445,10 +572,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7770DBFF25A9BF1F00FE3E66 /* MenuItemViewModelTests.swift in Sources */,
 				7727265125A8D5C60037F4A0 /* RootCoordinatorTests.swift in Sources */,
+				7770DBF025A9BA2000FE3E66 /* UsesAutoLayoutTests.swift in Sources */,
 				7727268025A8E9FF0037F4A0 /* MenuCoordinatorTests.swift in Sources */,
 				7727266025A8D9300037F4A0 /* MockAppContext.swift in Sources */,
 				7727265825A8D7B50037F4A0 /* MockDisplayContainer.swift in Sources */,
+				7770DBF925A9BB1D00FE3E66 /* MenuViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,6 +586,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7770DBD225A9AFDA00FE3E66 /* ExperienceViewController.swift in Sources */,
+				7770DBB825A99A8900FE3E66 /* AboutCoordinator.swift in Sources */,
 				7748DD4B25A8C75D0022515E /* Coordinator.swift in Sources */,
 				77ECB4FD25A8F43200830A82 /* UsesAutoLayout.swift in Sources */,
 				7727267625A8E3550037F4A0 /* MenuCoordinator.swift in Sources */,
@@ -463,15 +595,23 @@
 				7727266E25A8E2860037F4A0 /* ChildVCContainer.swift in Sources */,
 				77ECB50325A8F5B700830A82 /* Constraints.swift in Sources */,
 				7727263B25A8D00C0037F4A0 /* AppContext+CoreDataProvider.swift in Sources */,
+				7770DBB125A997D600FE3E66 /* MenuDelegate.swift in Sources */,
 				7770DBAC25A9082A00FE3E66 /* UITableViewCell+ext.swift in Sources */,
 				7727266A25A8DCE00037F4A0 /* SplitViewController.swift in Sources */,
 				772FBBD425A906A40056EE0F /* MenuRow.swift in Sources */,
+				7770DBE125A9B04F00FE3E66 /* EducationCoordinator.swift in Sources */,
+				7770DBEB25A9B1C500FE3E66 /* UIViewController+ext.swift in Sources */,
+				7770DBC425A9AE2000FE3E66 /* SkillsCoordinator.swift in Sources */,
+				7770DBD925A9AFFF00FE3E66 /* ExperienceCoordinator.swift in Sources */,
+				7770DBCB25A9AE3A00FE3E66 /* SkillsViewController.swift in Sources */,
 				772FBBC625A904450056EE0F /* MenuItemViewModel.swift in Sources */,
 				77ECB4F825A8F32D00830A82 /* UIColor+ext.swift in Sources */,
 				7748DD4F25A8C8F00022515E /* AppContext.swift in Sources */,
+				7770DBE725A9B07200FE3E66 /* EducationViewController.swift in Sources */,
 				7727262D25A8CDFB0037F4A0 /* DisplayContainer.swift in Sources */,
 				7727267A25A8E3C00037F4A0 /* MenuViewController.swift in Sources */,
 				7748DD3425A8B9300022515E /* CV.xcdatamodeld in Sources */,
+				7770DBBD25A99AA800FE3E66 /* AboutViewController.swift in Sources */,
 				7748DD5325A8C9470022515E /* RootCoordinator.swift in Sources */,
 				7748DD2A25A8B9300022515E /* AppDelegate.swift in Sources */,
 				77ECB50725A900D700830A82 /* MenuViewModel.swift in Sources */,

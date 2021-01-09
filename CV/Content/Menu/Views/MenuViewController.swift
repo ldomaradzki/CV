@@ -41,7 +41,11 @@ class MenuViewController: UIViewController {
     
     func setup(_ viewModel: MenuViewModel) {
         tableView.dataSource = viewModel
+        tableView.delegate = viewModel
+        
+        // manually select first row
         tableView.selectRow(at: IndexPath(row: 0, section: 0), animated: false, scrollPosition: .none)
+        viewModel.delegate?.didSelect(menu: .about)
     }
     
     private func setupLayout() {

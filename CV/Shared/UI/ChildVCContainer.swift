@@ -13,7 +13,9 @@ class ChildVCContainer: DisplayContainer {
     
     private let widthRatio: CGFloat = 0.23
     private let side: Side
+    
     private weak var parent: UIViewController?
+    weak var viewController: UIViewController?
     
     init(side: Side, parent: UIViewController) {
         self.side = side
@@ -21,8 +23,16 @@ class ChildVCContainer: DisplayContainer {
     }
     
     func display(_ viewController: UIViewController) {
+        self.viewController = viewController
         parent?.add(viewController)
         setupLayout(viewController)
+    }
+    
+    func removeViewController() {
+        viewController?.willMove(toParent: nil)
+        viewController?.view.removeFromSuperview()
+        viewController?.removeFromParent()
+        viewController = nil
     }
     
     func setupLayout(_ viewController: UIViewController) {
@@ -51,13 +61,5 @@ class ChildVCContainer: DisplayContainer {
         }
         
         NSLayoutConstraint.activate(constraints)
-    }
-}
-
-extension UIViewController {
-    func add(_ child: UIViewController) {
-        addChild(child)
-        view.addSubview(child.view)
-        child.didMove(toParent: self)
     }
 }

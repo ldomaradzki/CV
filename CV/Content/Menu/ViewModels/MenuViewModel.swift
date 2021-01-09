@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 class MenuViewModel: NSObject {
-    
+    weak var delegate: MenuDelegate?
 }
 
 extension MenuViewModel: UITableViewDataSource {
@@ -25,5 +25,12 @@ extension MenuViewModel: UITableViewDataSource {
         cell.setup(viewModel: MenuItemViewModel(indexPath.row))
         
         return cell
+    }
+}
+
+extension MenuViewModel: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let menu = MenuRow(rawValue: indexPath.row) else { return }
+        delegate?.didSelect(menu: menu)
     }
 }

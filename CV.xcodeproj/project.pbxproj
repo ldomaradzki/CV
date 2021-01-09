@@ -43,6 +43,7 @@
 		7770DBF025A9BA2000FE3E66 /* UsesAutoLayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7770DBEF25A9BA2000FE3E66 /* UsesAutoLayoutTests.swift */; };
 		7770DBF925A9BB1D00FE3E66 /* MenuViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7770DBF825A9BB1D00FE3E66 /* MenuViewModelTests.swift */; };
 		7770DBFF25A9BF1F00FE3E66 /* MenuItemViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7770DBFE25A9BF1F00FE3E66 /* MenuItemViewModelTests.swift */; };
+		7770DC0925AA081F00FE3E66 /* UITableView+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7770DC0825AA081F00FE3E66 /* UITableView+ext.swift */; };
 		77ECB4F825A8F32D00830A82 /* UIColor+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77ECB4F725A8F32D00830A82 /* UIColor+ext.swift */; };
 		77ECB4FD25A8F43200830A82 /* UsesAutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77ECB4FC25A8F43200830A82 /* UsesAutoLayout.swift */; };
 		77ECB50325A8F5B700830A82 /* Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77ECB50225A8F5B700830A82 /* Constraints.swift */; };
@@ -101,6 +102,7 @@
 		7770DBEF25A9BA2000FE3E66 /* UsesAutoLayoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsesAutoLayoutTests.swift; sourceTree = "<group>"; };
 		7770DBF825A9BB1D00FE3E66 /* MenuViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModelTests.swift; sourceTree = "<group>"; };
 		7770DBFE25A9BF1F00FE3E66 /* MenuItemViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemViewModelTests.swift; sourceTree = "<group>"; };
+		7770DC0825AA081F00FE3E66 /* UITableView+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+ext.swift"; sourceTree = "<group>"; };
 		77ECB4F725A8F32D00830A82 /* UIColor+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+ext.swift"; sourceTree = "<group>"; };
 		77ECB4FC25A8F43200830A82 /* UsesAutoLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsesAutoLayout.swift; sourceTree = "<group>"; };
 		77ECB50225A8F5B700830A82 /* Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constraints.swift; sourceTree = "<group>"; };
@@ -294,11 +296,11 @@
 			isa = PBXGroup;
 			children = (
 				7748DD4625A8C7290022515E /* App */,
-				7727262825A8CBDC0037F4A0 /* Resources */,
 				7748DD4925A8C7470022515E /* Content */,
-				7748DD4725A8C7340022515E /* Shared */,
-				7748DD3A25A8B9300022515E /* Info.plist */,
 				7748DD3225A8B9300022515E /* CV.xcdatamodeld */,
+				7748DD3A25A8B9300022515E /* Info.plist */,
+				7727262825A8CBDC0037F4A0 /* Resources */,
+				7748DD4725A8C7340022515E /* Shared */,
 			);
 			path = CV;
 			sourceTree = "<group>";
@@ -452,6 +454,7 @@
 				77ECB4F725A8F32D00830A82 /* UIColor+ext.swift */,
 				7770DBAB25A9082A00FE3E66 /* UITableViewCell+ext.swift */,
 				7770DBEA25A9B1C500FE3E66 /* UIViewController+ext.swift */,
+				7770DC0825AA081F00FE3E66 /* UITableView+ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -612,6 +615,7 @@
 				7727267A25A8E3C00037F4A0 /* MenuViewController.swift in Sources */,
 				7748DD3425A8B9300022515E /* CV.xcdatamodeld in Sources */,
 				7770DBBD25A99AA800FE3E66 /* AboutViewController.swift in Sources */,
+				7770DC0925AA081F00FE3E66 /* UITableView+ext.swift in Sources */,
 				7748DD5325A8C9470022515E /* RootCoordinator.swift in Sources */,
 				7748DD2A25A8B9300022515E /* AppDelegate.swift in Sources */,
 				77ECB50725A900D700830A82 /* MenuViewModel.swift in Sources */,
@@ -807,6 +811,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MB77WLZ4ZC;
 				INFOPLIST_FILE = CV/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -826,6 +831,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MB77WLZ4ZC;
 				INFOPLIST_FILE = CV/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

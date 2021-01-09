@@ -10,6 +10,7 @@ import UIKit
 
 class MenuItemTableViewCell: UITableViewCell {
     private let margin: CGFloat = 30
+    private let iconSize: CGFloat = 30
     
     @UsesAutoLayout
     private var itemLabel: UILabel = {
@@ -34,14 +35,14 @@ class MenuItemTableViewCell: UITableViewCell {
       
         contentView.addSubview(itemLabel, constraints: [
             equal(\.centerYAnchor),
-            equal(\.leftAnchor, constant: margin + 80)
+            equal(\.leftAnchor, constant: margin + 70)
         ])
         
         contentView.addSubview(itemIcon, constraints: [
             equal(\.centerYAnchor),
-            equal(\.leftAnchor, constant: margin + 35),
-            constant(\.heightAnchor, constant: 30),
-            constant(\.widthAnchor, constant: 30)
+            equal(\.leftAnchor, constant: margin + 30),
+            constant(\.heightAnchor, constant: iconSize),
+            constant(\.widthAnchor, constant: iconSize)
         ])
     }
     

@@ -30,6 +30,10 @@ class MenuCoordinator: AppCoordinator {
 }
 
 extension MenuCoordinator: MenuDelegate {
+    func tappedContactMe() {
+        delegate?.tappedContactMe()
+    }
+    
     func didSelect(menu: MenuRow) {
         delegate?.didSelect(menu: menu)
     }

@@ -9,4 +9,5 @@ import Foundation
 
 protocol MenuDelegate: class {
     func didSelect(menu: MenuRow)
+    func tappedContactMe()
 }

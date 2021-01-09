@@ -10,6 +10,11 @@ import UIKit
 
 class MenuViewModel: NSObject {
     weak var delegate: MenuDelegate?
+    var contactAction: UIAction {
+        UIAction { [weak self] _ in
+            self?.delegate?.tappedContactMe()
+        }
+    }
 }
 
 extension MenuViewModel: UITableViewDataSource {

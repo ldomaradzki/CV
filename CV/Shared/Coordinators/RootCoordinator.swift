@@ -6,8 +6,9 @@
 //
 
 import Foundation
+import MessageUI
 
-class RootCoordinator: AppCoordinator {
+class RootCoordinator: NSObject, AppCoordinator {
     var appContext: Context
     var childCoordinators: [Coordinator] = []
     var displayContainer: DisplayContainer?
@@ -65,9 +66,29 @@ class RootCoordinator: AppCoordinator {
 }
 
 extension RootCoordinator: MenuDelegate {
+    func tappedContactMe() {
+        let mailAddress = "lukasz.domaradzki@gmail.com"
+        
+        if MFMailComposeViewController.canSendMail() {
+            let mail = MFMailComposeViewController()
+            mail.mailComposeDelegate = self
+            mail.setToRecipients([mailAddress])
+
+            splitViewContainer.present(mail, animated: true)
+        } else if let mailto = URL(string: "mailto:\(mailAddress)") {
+            UIApplication.shared.open(mailto, options: [:], completionHandler: nil)
+        }
+    }
+    
     func didSelect(menu: MenuRow) {
         guard menu != selectedMenu else { return }
         
         selectedMenu = menu
+    }
+}
+
+extension RootCoordinator: MFMailComposeViewControllerDelegate {
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true, completion: nil)
     }
 }

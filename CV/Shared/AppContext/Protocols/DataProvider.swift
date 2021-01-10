@@ -8,5 +8,5 @@
 import Foundation
 
 protocol DataProvider {
-    func fetchAllWorks(completion: ([Work]) -> Void)
+    func fetchAllWorks() -> [Work]
 }

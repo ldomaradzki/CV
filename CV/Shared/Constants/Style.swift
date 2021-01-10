@@ -18,4 +18,6 @@ extension UIColor {
     
     static var brightOrange = UIColor(rgb: 0xFF6D59)
     static var blackish = UIColor(rgb: 0x2E2B2B)
+    static var yellowish = UIColor(rgb: 0xF6BB00)
+    static var greenish = UIColor(rgb: 0x57BAAB)
 }

@@ -8,21 +8,21 @@
     {
         "companyName": "Kainos Software Poland",
         "startDate": "2016-04-01T00:00:00Z",
-        "endDate": "2018-01-31T23:59:59Z",
+        "endDate": "2018-01-31T00:00:00Z",
         "lastPosition": "Senior Software Engineer",
         "positionDescription": "Senior iOS engineer worked on iPad application for UK based medical practitioners (doctors, nurses). Project was written in Swift using Core Data, advanced backend API, Auto Layout, Jenkins CI, XC UI automation tests etc. Working in Scrum methodology. Helped with recruitment processes."
     },
     {
         "companyName": "Jeppesen, a Boeing Company",
         "startDate": "2012-09-01T00:00:00Z",
-        "endDate": "2016-03-31T23:59:59Z",
+        "endDate": "2016-03-31T00:00:00Z",
         "lastPosition": "Software Research Engineer",
         "positionDescription": "Internal Jeppesen and Boeing R&D department mainly as iOS developer (10+ projects finished), UI/UX designer (4+ projects finished) and worked as tech lead/research analyst. Employee of the year 2014; Agile environment in most projects; Company-wide administration of Apple programs; iOS mentoring in various company departments; Design work in Sketch app and Adobe Photoshop; Participation in projects scenario and idea creation process, business canvas and business value propositions.; 2 aviation patents; Helped with recruitment processes"
     },
     {
         "companyName": "Blue Services",
         "startDate": "2011-11-01T00:00:00Z",
-        "endDate": "2012-08-31T23:59:59Z",
+        "endDate": "2012-08-31T00:00:00Z",
         "lastPosition": "iOS developer",
         "positionDescription": "Software house for various big polish companies. 3 production applications finished: Interia London 2012 – iOS news coverage of London Olympics sponsored by Panasonic and Interia, work done as iOS developer / team leader; SKOK Insurance – iOS enterprise app for insurance agents, work done as iOS developer / team leader; BuddyWay – iOS travel app with IVONA text-to-speech technology. Administration of Apple accounts. Helping with UX design for some of the iOS apps"
     }

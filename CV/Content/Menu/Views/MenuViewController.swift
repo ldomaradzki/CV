@@ -11,10 +11,7 @@ import UIKit
 class MenuViewController: UIViewController {
     private let contactsMargin: CGFloat = 40
     
-    @UsesAutoLayout
     private var header = UIView()
-    
-    @UsesAutoLayout
     private var headerTitle: UILabel = {
         let label = UILabel()
         label.text = "Curriculum\nVitae"
@@ -24,13 +21,11 @@ class MenuViewController: UIViewController {
         return label
     }()
     
-    @UsesAutoLayout
     private var headerIcon: UIImageView = {
         let imageView = UIImageView(image: UIImage(named: "CVLogo"))
         return imageView
     }()
     
-    @UsesAutoLayout
     private var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .plain)
         tableView.separatorStyle = .none
@@ -41,7 +36,6 @@ class MenuViewController: UIViewController {
         return tableView
     }()
     
-    @UsesAutoLayout
     private var contactView = MenuContactView()
     
     override func viewDidLoad() {

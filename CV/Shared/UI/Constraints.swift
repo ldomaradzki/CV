@@ -20,6 +20,12 @@ func equal<Axis, Anchor>(_ keyPath: KeyPath<UIView, Anchor>, constant: CGFloat =
     return equal(keyPath, keyPath, constant: constant)
 }
 
+func equal<Axis, Anchor>(_ keyPath: KeyPath<UIView, Anchor>, otherView: UIView, _ to: KeyPath<UIView, Anchor>, constant: CGFloat = 0) -> Constraint where Anchor: NSLayoutAnchor<Axis> {
+    return { view, _ in
+        view[keyPath: keyPath].constraint(equalTo: otherView[keyPath: to], constant: constant)
+    }
+}
+
 func constant<Anchor>(_ keyPath: KeyPath<UIView, Anchor>, constant: CGFloat, priority: UILayoutPriority = .required) -> Constraint where Anchor: NSLayoutDimension {
     return { view, _ in
         let constraint = view[keyPath: keyPath].constraint(equalToConstant: constant)

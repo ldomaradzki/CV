@@ -43,6 +43,9 @@
 		775D3B6825AB4AB900FB8F15 /* FileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775D3B6725AB4AB900FB8F15 /* FileService.swift */; };
 		775D3B6C25AB4BEC00FB8F15 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775D3B6B25AB4BEC00FB8F15 /* DataService.swift */; };
 		775D3B7025AB4C8000FB8F15 /* AppContext+FileProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775D3B6F25AB4C8000FB8F15 /* AppContext+FileProvider.swift */; };
+		775D3B7425AB587F00FB8F15 /* ExperienceWorkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775D3B7325AB587F00FB8F15 /* ExperienceWorkTableViewCell.swift */; };
+		775D3B7A25AB5B7600FB8F15 /* ExperienceWorkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775D3B7925AB5B7600FB8F15 /* ExperienceWorkViewModel.swift */; };
+		775D3B8125AB760500FB8F15 /* TileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775D3B8025AB760500FB8F15 /* TileView.swift */; };
 		7770DBAC25A9082A00FE3E66 /* UITableViewCell+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7770DBAB25A9082A00FE3E66 /* UITableViewCell+ext.swift */; };
 		7770DBB125A997D600FE3E66 /* MenuDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7770DBB025A997D600FE3E66 /* MenuDelegate.swift */; };
 		7770DBB825A99A8900FE3E66 /* AboutCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7770DBB725A99A8900FE3E66 /* AboutCoordinator.swift */; };
@@ -59,7 +62,6 @@
 		7770DBFF25A9BF1F00FE3E66 /* MenuItemViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7770DBFE25A9BF1F00FE3E66 /* MenuItemViewModelTests.swift */; };
 		7770DC0925AA081F00FE3E66 /* UITableView+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7770DC0825AA081F00FE3E66 /* UITableView+ext.swift */; };
 		77ECB4F825A8F32D00830A82 /* UIColor+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77ECB4F725A8F32D00830A82 /* UIColor+ext.swift */; };
-		77ECB4FD25A8F43200830A82 /* UsesAutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77ECB4FC25A8F43200830A82 /* UsesAutoLayout.swift */; };
 		77ECB50325A8F5B700830A82 /* Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77ECB50225A8F5B700830A82 /* Constraints.swift */; };
 		77ECB50725A900D700830A82 /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77ECB50625A900D700830A82 /* MenuViewModel.swift */; };
 		77ECB50D25A903C100830A82 /* MenuItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77ECB50C25A903C100830A82 /* MenuItemTableViewCell.swift */; };
@@ -116,6 +118,9 @@
 		775D3B6725AB4AB900FB8F15 /* FileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileService.swift; sourceTree = "<group>"; };
 		775D3B6B25AB4BEC00FB8F15 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		775D3B6F25AB4C8000FB8F15 /* AppContext+FileProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppContext+FileProvider.swift"; sourceTree = "<group>"; };
+		775D3B7325AB587F00FB8F15 /* ExperienceWorkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceWorkTableViewCell.swift; sourceTree = "<group>"; };
+		775D3B7925AB5B7600FB8F15 /* ExperienceWorkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceWorkViewModel.swift; sourceTree = "<group>"; };
+		775D3B8025AB760500FB8F15 /* TileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileView.swift; sourceTree = "<group>"; };
 		7770DBAB25A9082A00FE3E66 /* UITableViewCell+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+ext.swift"; sourceTree = "<group>"; };
 		7770DBB025A997D600FE3E66 /* MenuDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDelegate.swift; sourceTree = "<group>"; };
 		7770DBB725A99A8900FE3E66 /* AboutCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCoordinator.swift; sourceTree = "<group>"; };
@@ -132,7 +137,6 @@
 		7770DBFE25A9BF1F00FE3E66 /* MenuItemViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemViewModelTests.swift; sourceTree = "<group>"; };
 		7770DC0825AA081F00FE3E66 /* UITableView+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+ext.swift"; sourceTree = "<group>"; };
 		77ECB4F725A8F32D00830A82 /* UIColor+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+ext.swift"; sourceTree = "<group>"; };
-		77ECB4FC25A8F43200830A82 /* UsesAutoLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsesAutoLayout.swift; sourceTree = "<group>"; };
 		77ECB50225A8F5B700830A82 /* Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constraints.swift; sourceTree = "<group>"; };
 		77ECB50625A900D700830A82 /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
 		77ECB50C25A903C100830A82 /* MenuItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemTableViewCell.swift; sourceTree = "<group>"; };
@@ -255,6 +259,7 @@
 		7727266825A8DCCF0037F4A0 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				775D3B7F25AB75FB00FB8F15 /* Tile */,
 				7727266925A8DCE00037F4A0 /* SplitViewController.swift */,
 				7727266D25A8E2860037F4A0 /* ChildVCContainer.swift */,
 				77ECB50225A8F5B700830A82 /* Constraints.swift */,
@@ -397,6 +402,7 @@
 			isa = PBXGroup;
 			children = (
 				775D3B1D25AA4CEF00FB8F15 /* ExperienceViewModel.swift */,
+				775D3B7925AB5B7600FB8F15 /* ExperienceWorkViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -417,6 +423,14 @@
 				775D3B5B25AB0FB600FB8F15 /* UserDefaults.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		775D3B7F25AB75FB00FB8F15 /* Tile */ = {
+			isa = PBXGroup;
+			children = (
+				775D3B8025AB760500FB8F15 /* TileView.swift */,
+			);
+			path = Tile;
 			sourceTree = "<group>";
 		};
 		7770DBAF25A997CC00FE3E66 /* Protocols */ = {
@@ -475,6 +489,7 @@
 			isa = PBXGroup;
 			children = (
 				7770DBD125A9AFDA00FE3E66 /* ExperienceViewController.swift */,
+				775D3B7325AB587F00FB8F15 /* ExperienceWorkTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -527,7 +542,6 @@
 		77ECB4FB25A8F42200830A82 /* PropertyWrappers */ = {
 			isa = PBXGroup;
 			children = (
-				77ECB4FC25A8F43200830A82 /* UsesAutoLayout.swift */,
 				775D3B5625AB0F8000FB8F15 /* UserDefault.swift */,
 			);
 			path = PropertyWrappers;
@@ -660,7 +674,6 @@
 				7770DBB825A99A8900FE3E66 /* AboutCoordinator.swift in Sources */,
 				775D3B5725AB0F8000FB8F15 /* UserDefault.swift in Sources */,
 				7748DD4B25A8C75D0022515E /* Coordinator.swift in Sources */,
-				77ECB4FD25A8F43200830A82 /* UsesAutoLayout.swift in Sources */,
 				7727267625A8E3550037F4A0 /* MenuCoordinator.swift in Sources */,
 				77ECB50D25A903C100830A82 /* MenuItemTableViewCell.swift in Sources */,
 				7727266E25A8E2860037F4A0 /* ChildVCContainer.swift in Sources */,
@@ -687,11 +700,14 @@
 				7770DBE725A9B07200FE3E66 /* EducationViewController.swift in Sources */,
 				775D3B5C25AB0FB600FB8F15 /* UserDefaults.swift in Sources */,
 				775D3B1E25AA4CEF00FB8F15 /* ExperienceViewModel.swift in Sources */,
+				775D3B7A25AB5B7600FB8F15 /* ExperienceWorkViewModel.swift in Sources */,
 				7727262D25A8CDFB0037F4A0 /* DisplayContainer.swift in Sources */,
 				775D3B4425AA5E0200FB8F15 /* Managed.swift in Sources */,
 				7727267A25A8E3C00037F4A0 /* MenuViewController.swift in Sources */,
+				775D3B8125AB760500FB8F15 /* TileView.swift in Sources */,
 				7770DBBD25A99AA800FE3E66 /* AboutViewController.swift in Sources */,
 				775D3B1925AA35BE00FB8F15 /* MenuContactView.swift in Sources */,
+				775D3B7425AB587F00FB8F15 /* ExperienceWorkTableViewCell.swift in Sources */,
 				7770DC0925AA081F00FE3E66 /* UITableView+ext.swift in Sources */,
 				7748DD5325A8C9470022515E /* RootCoordinator.swift in Sources */,
 				7748DD2A25A8B9300022515E /* AppDelegate.swift in Sources */,

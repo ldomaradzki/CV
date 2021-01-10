@@ -8,15 +8,16 @@
 import Foundation
 
 extension AppContext: DataProvider {
-    func fetchAllWorks(completion: ([Work]) -> Void) {
+    func fetchAllWorks() -> [Work] {
         let request = Work.sortedFetchRequest
         request.returnsObjectsAsFaults = false
         
         do {
-            let result = try mainContext.fetch(request)
-            completion(result)
+            return try mainContext.fetch(request)
         } catch let error {
             print(error)
         }
+        
+        return []
     }
 }

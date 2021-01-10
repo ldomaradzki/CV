@@ -9,7 +9,6 @@ import Foundation
 import UIKit
 
 class MenuContactView: UIView {
-    @UsesAutoLayout
     private var contactButton: UIButton = {
         let button = UIButton(type: .roundedRect)
         button.backgroundColor = .white
@@ -25,8 +24,6 @@ class MenuContactView: UIView {
     }()
     
     private var mailImage = UIImageView(image: UIImage(named: "Mail"))
-    
-    @UsesAutoLayout
     private var handImage = UIImageView(image: UIImage(named: "Hand"))
     
     init() {

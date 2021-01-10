@@ -12,7 +12,6 @@ class MenuItemTableViewCell: UITableViewCell {
     private let margin: CGFloat = 30
     private let iconSize: CGFloat = 30
     
-    @UsesAutoLayout
     private var itemLabel: UILabel = {
         let label = UILabel()
         label.textColor = .primaryColor
@@ -22,7 +21,6 @@ class MenuItemTableViewCell: UITableViewCell {
         return label
     }()
     
-    @UsesAutoLayout
     private var itemIcon: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit

@@ -12,13 +12,15 @@ class ExperienceCoordinator: AppCoordinator {
     var childCoordinators: [Coordinator] = []
     var container: DisplayContainer
     
+    private let viewModel: ExperienceViewModel
+    
     init(appContext: Context, container: DisplayContainer) {
         self.appContext = appContext
         self.container = container
+        viewModel = ExperienceViewModel(dataProvider: appContext)
     }
     
     func start() {
-        let viewModel = ExperienceViewModel(dataProvider: appContext)
         let experienceViewController = ExperienceViewController()
         experienceViewController.setup(viewModel)
         container.display(experienceViewController)

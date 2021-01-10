@@ -11,7 +11,8 @@ import UIKit
 extension UIColor {
     /// dark blue
     static var primaryColor = UIColor(rgb: 0x160E4D)
-    
+    /// bright green
+    static var secondaryColor = UIColor(rgb: 0x14BCAA)
     /// light gray
     static var secondaryBackground = UIColor(rgb: 0xF5F5F5)
     

@@ -15,15 +15,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return UIWindow(frame: scene.coordinateSpace.bounds)
     }()
     
-    /// Main entry coordinator, initilizes root view controller
-    lazy var rootCoordinator: Coordinator? = {
-        RootCoordinator(container: window, appContext: AppContext())
-    }()
+    private var rootCoordinator: Coordinator?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        rootCoordinator?.start()
+        
+        CoreDataService.createPersistentContainer {
+            [unowned self] container in
+            let appContext = AppContext(container)
+            self.rootCoordinator = RootCoordinator(container: self.window, appContext: appContext)
+            self.rootCoordinator?.start()
+        }
         
         return true
     }
 }
-

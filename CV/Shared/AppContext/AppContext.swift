@@ -6,9 +6,23 @@
 //
 
 import Foundation
+import CoreData
 
-protocol Context: CoreDataProvider { }
+protocol Context: CoreDataProvider, DataProvider, FileProvider { }
 
 class AppContext: Context {
-    let coreDataService = CoreDataService()
+    let coreDataService: CoreDataService
+    let fileService = FileService()
+    var dataService: DataService?
+    
+    init(_ container: NSPersistentContainer) {
+        coreDataService = CoreDataService(container: container)
+        dataService = DataService(provider: self)
+        
+        if !UserDefaults.initialDataInserted {
+            dataService?.insertInitialData()
+            UserDefaults.initialDataInserted = true
+        }
+        
+    }
 }

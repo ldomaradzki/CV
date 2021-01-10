@@ -18,7 +18,9 @@ class ExperienceCoordinator: AppCoordinator {
     }
     
     func start() {
+        let viewModel = ExperienceViewModel(dataProvider: appContext)
         let experienceViewController = ExperienceViewController()
+        experienceViewController.setup(viewModel)
         container.display(experienceViewController)
     }
 }

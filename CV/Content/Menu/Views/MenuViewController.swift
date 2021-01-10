@@ -20,8 +20,14 @@ class MenuViewController: UIViewController {
         label.text = "Curriculum\nVitae"
         label.numberOfLines = 0
         label.textColor = .primaryColor
-        label.font = .boldSystemFont(ofSize: 24)
+        label.font = .boldSystemFont(ofSize: 26)
         return label
+    }()
+    
+    @UsesAutoLayout
+    private var headerIcon: UIImageView = {
+        let imageView = UIImageView(image: UIImage(named: "CVLogo"))
+        return imageView
     }()
     
     @UsesAutoLayout
@@ -36,27 +42,7 @@ class MenuViewController: UIViewController {
     }()
     
     @UsesAutoLayout
-    private var contactContainerView: UIView = {
-        let view = UIView()
-        view.backgroundColor = .brightOrange
-        view.layer.cornerRadius = 30
-        return view
-    }()
-    
-    @UsesAutoLayout
-    private var contactButton: UIButton = {
-        let button = UIButton(type: .roundedRect)
-        button.backgroundColor = .white
-        button.setTitle("Mail me!", for: .normal)
-        button.tintColor = .blackish
-        button.titleLabel?.font = .boldSystemFont(ofSize: 16)
-        button.layer.cornerRadius = 15
-        button.layer.shadowColor = UIColor.white.cgColor
-        button.layer.shadowOffset = CGSize(width: 0, height: 5)
-        button.layer.shadowRadius = 0
-        button.layer.shadowOpacity = 0.5
-        return button
-    }()
+    private var contactView = MenuContactView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,12 +54,11 @@ class MenuViewController: UIViewController {
     func setup(_ viewModel: MenuViewModel) {
         tableView.dataSource = viewModel
         tableView.delegate = viewModel
+        contactView.setButtonAction(viewModel.contactAction)
         
         // manually select first row
         tableView.selectRow(at: IndexPath(row: 0, section: 0), animated: false, scrollPosition: .none)
         viewModel.delegate?.didSelect(menu: .about)
-        
-        contactButton.addAction(viewModel.contactAction, for: .touchUpInside)
     }
     
     private func setupLayout() {
@@ -88,7 +73,14 @@ class MenuViewController: UIViewController {
         
         header.addSubview(headerTitle, constraints: [
             equal(\.centerYAnchor),
-            equal(\.centerXAnchor)
+            equal(\.centerXAnchor, constant: 20)
+        ])
+        
+        header.addSubview(headerIcon, constraints: [
+            equal(\.centerYAnchor),
+            equal(\.leftAnchor, constant: 35),
+            constant(\.widthAnchor, constant: 46),
+            constant(\.heightAnchor, constant: 39)
         ])
         
         // MENU
@@ -100,18 +92,11 @@ class MenuViewController: UIViewController {
         ])
         
         // CONTACT
-        view.addSubview(contactContainerView, constraints: [
+        view.addSubview(contactView, constraints: [
             equal(\.leftAnchor, constant: contactsMargin),
             equal(\.rightAnchor, constant: -contactsMargin),
             equal(\.bottomAnchor, constant: -contactsMargin),
-            constant(\.heightAnchor, constant: 250)
-        ])
-        
-        contactContainerView.addSubview(contactButton, constraints: [
-            equal(\.centerXAnchor),
-            equal(\.bottomAnchor, constant: -30.0),
-            constant(\.widthAnchor, constant: 110),
-            constant(\.heightAnchor, constant: 40)
+            constant(\.heightAnchor, constant: 200)
         ])
     }
 }

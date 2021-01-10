@@ -9,11 +9,11 @@ import Foundation
 import CoreData
 
 extension AppContext: CoreDataProvider {
-    var persistentContainer: NSPersistentContainer {
-        coreDataService.persistentContainer
+    func batchInsert<T>(count: Int, handler: @escaping (Int, T) -> Void) where T : NSManagedObject {
+        coreDataService.batchInsert(count: count, handler: handler)
     }
     
-    func saveContext() {
-        coreDataService.saveContext()
-    }   
+    var mainContext: NSManagedObjectContext {
+        coreDataService.mainContext
+    }
 }

@@ -9,46 +9,46 @@ import Foundation
 import CoreData
 
 class CoreDataService {
-    lazy var persistentContainer: NSPersistentContainer = {
-        /*
-         The persistent container for the application. This implementation
-         creates and returns a container, having loaded the store for the
-         application to it. This property is optional since there are legitimate
-         error conditions that could cause the creation of the store to fail.
-        */
-        let container = NSPersistentContainer(name: "CV")
-        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
-            if let error = error as NSError? {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                 
-                /*
-                 Typical reasons for an error here include:
-                 * The parent directory does not exist, cannot be created, or disallows writing.
-                 * The persistent store is not accessible, due to permissions or data protection when the device is locked.
-                 * The device is out of space.
-                 * The store could not be migrated to the current model version.
-                 Check the error message to determine what the actual problem was.
-                 */
-                fatalError("Unresolved error \(error), \(error.userInfo)")
-            }
+    private let container: NSPersistentContainer
+    
+    init(container: NSPersistentContainer) {
+        self.container = container
+    }
+    
+    /// Main-thread context
+    var mainContext: NSManagedObjectContext {
+        container.viewContext
+    }
+    
+    func batchInsert<T: NSManagedObject>(count: Int, handler: @escaping (Int, T) -> Void) {
+        var index = 0
+        
+        let batchInsertRequest = NSBatchInsertRequest(entity: T.entity(), managedObjectHandler: { newObject -> Bool in
+            guard let newObject = newObject as? T,
+                  index < count else { return true }
+            
+            handler(index, newObject)
+            index += 1
+            
+            return false
         })
-        return container
-    }()
-
-    // MARK: - Core Data Saving support
-
-    func saveContext () {
-        let context = persistentContainer.viewContext
-        if context.hasChanges {
-            do {
-                try context.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nserror = error as NSError
-                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
-            }
+        
+        do {
+            try mainContext.execute(batchInsertRequest)
+        } catch let error {
+            print(error)
         }
+    }
+    
+    /// Creates persistent container and returns with completion block
+    static func createPersistentContainer(completion: @escaping (NSPersistentContainer) -> ()) {
+        let container = NSPersistentContainer(name: "CV")
+        container.loadPersistentStores(completionHandler: { _, error in
+            guard error == nil else {
+                fatalError("Failed to load store: \(error!)")
+            }
+            
+            DispatchQueue.main.async { completion(container) }
+        })
     }
 }

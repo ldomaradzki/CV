@@ -9,7 +9,7 @@ import Foundation
 import CoreData
 
 protocol CoreDataProvider {
-    var persistentContainer: NSPersistentContainer { get }
+    var mainContext: NSManagedObjectContext { get }
     
-    func saveContext()
+    func batchInsert<T: NSManagedObject>(count: Int, handler: @escaping (Int, T) -> Void)
 }

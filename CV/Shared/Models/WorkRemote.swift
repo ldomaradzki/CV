@@ -13,4 +13,5 @@ struct WorkRemote: Codable {
     let endDate: Date?
     let lastPosition: String
     let positionDescription: String
+    let skills: [String]
 }

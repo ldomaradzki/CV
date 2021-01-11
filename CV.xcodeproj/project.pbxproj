@@ -46,6 +46,9 @@
 		775D3B7425AB587F00FB8F15 /* ExperienceWorkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775D3B7325AB587F00FB8F15 /* ExperienceWorkTableViewCell.swift */; };
 		775D3B7A25AB5B7600FB8F15 /* ExperienceWorkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775D3B7925AB5B7600FB8F15 /* ExperienceWorkViewModel.swift */; };
 		775D3B8125AB760500FB8F15 /* TileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775D3B8025AB760500FB8F15 /* TileView.swift */; };
+		7766A76825AC9A52004D6830 /* SkillsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7766A76725AC9A52004D6830 /* SkillsViewModel.swift */; };
+		7766A76E25AC9AF9004D6830 /* Array+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7766A76D25AC9AF9004D6830 /* Array+ext.swift */; };
+		7766A77225ACC54E004D6830 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7766A77125ACC54E004D6830 /* CircleView.swift */; };
 		7770DBAC25A9082A00FE3E66 /* UITableViewCell+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7770DBAB25A9082A00FE3E66 /* UITableViewCell+ext.swift */; };
 		7770DBB125A997D600FE3E66 /* MenuDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7770DBB025A997D600FE3E66 /* MenuDelegate.swift */; };
 		7770DBB825A99A8900FE3E66 /* AboutCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7770DBB725A99A8900FE3E66 /* AboutCoordinator.swift */; };
@@ -121,6 +124,9 @@
 		775D3B7325AB587F00FB8F15 /* ExperienceWorkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceWorkTableViewCell.swift; sourceTree = "<group>"; };
 		775D3B7925AB5B7600FB8F15 /* ExperienceWorkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceWorkViewModel.swift; sourceTree = "<group>"; };
 		775D3B8025AB760500FB8F15 /* TileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileView.swift; sourceTree = "<group>"; };
+		7766A76725AC9A52004D6830 /* SkillsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsViewModel.swift; sourceTree = "<group>"; };
+		7766A76D25AC9AF9004D6830 /* Array+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+ext.swift"; sourceTree = "<group>"; };
+		7766A77125ACC54E004D6830 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		7770DBAB25A9082A00FE3E66 /* UITableViewCell+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+ext.swift"; sourceTree = "<group>"; };
 		7770DBB025A997D600FE3E66 /* MenuDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDelegate.swift; sourceTree = "<group>"; };
 		7770DBB725A99A8900FE3E66 /* AboutCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCoordinator.swift; sourceTree = "<group>"; };
@@ -433,6 +439,14 @@
 			path = Tile;
 			sourceTree = "<group>";
 		};
+		7766A76625AC9A47004D6830 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				7766A76725AC9A52004D6830 /* SkillsViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		7770DBAF25A997CC00FE3E66 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -461,6 +475,7 @@
 		7770DBC225A9AE1100FE3E66 /* Skills */ = {
 			isa = PBXGroup;
 			children = (
+				7766A76625AC9A47004D6830 /* ViewModels */,
 				7770DBC925A9AE3000FE3E66 /* Views */,
 				7770DBC325A9AE2000FE3E66 /* SkillsCoordinator.swift */,
 			);
@@ -471,6 +486,7 @@
 			isa = PBXGroup;
 			children = (
 				7770DBCA25A9AE3A00FE3E66 /* SkillsViewController.swift */,
+				7766A77125ACC54E004D6830 /* CircleView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -535,6 +551,7 @@
 				7770DBAB25A9082A00FE3E66 /* UITableViewCell+ext.swift */,
 				7770DBEA25A9B1C500FE3E66 /* UIViewController+ext.swift */,
 				7770DC0825AA081F00FE3E66 /* UITableView+ext.swift */,
+				7766A76D25AC9AF9004D6830 /* Array+ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -696,6 +713,8 @@
 				775D3B4F25AA630500FB8F15 /* CV.xcdatamodeld in Sources */,
 				77ECB4F825A8F32D00830A82 /* UIColor+ext.swift in Sources */,
 				7748DD4F25A8C8F00022515E /* AppContext.swift in Sources */,
+				7766A76825AC9A52004D6830 /* SkillsViewModel.swift in Sources */,
+				7766A76E25AC9AF9004D6830 /* Array+ext.swift in Sources */,
 				775D3B6425AB4A6800FB8F15 /* FileProvider.swift in Sources */,
 				7770DBE725A9B07200FE3E66 /* EducationViewController.swift in Sources */,
 				775D3B5C25AB0FB600FB8F15 /* UserDefaults.swift in Sources */,
@@ -713,6 +732,7 @@
 				7748DD2A25A8B9300022515E /* AppDelegate.swift in Sources */,
 				775D3B6825AB4AB900FB8F15 /* FileService.swift in Sources */,
 				775D3B4C25AA617600FB8F15 /* AppContext+DataProvider.swift in Sources */,
+				7766A77225ACC54E004D6830 /* CircleView.swift in Sources */,
 				77ECB50725A900D700830A82 /* MenuViewModel.swift in Sources */,
 				7727263625A8CF060037F4A0 /* CoreDataService.swift in Sources */,
 				775D3B4825AA615D00FB8F15 /* DataProvider.swift in Sources */,

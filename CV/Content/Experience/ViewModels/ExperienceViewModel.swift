@@ -17,7 +17,7 @@ class ExperienceViewModel: NSObject {
         self.works = dataProvider.fetchAllWorks()
     }
     
-    var yearsOfExperienceTitle = "Years of experience"
+    let yearsOfExperienceTitle = "Years of experience"
     var yearsOfExperienceValue: String {
         let timeInterval: Double = works.reduce(into: 0.0) { (result, work) in
             result += (work._endDate ?? Date()).timeIntervalSince(work.startDate)
@@ -26,6 +26,20 @@ class ExperienceViewModel: NSObject {
         let years = timeInterval / 3600 / 24 / 365
         return String(format: "%.1f", years)
     }
+    
+    let patentsTitle = "No. of patents"
+    let patentsValue = "2"
+    
+    let skillsTitle = "Skills"
+    var skillsValue: String {
+        let results = works.reduce(into: []) { (result, work) in
+            result.append(contentsOf: work.skills)
+        }
+        return "\(results.unique.count)+"
+    }
+    
+    let catsTitle = "No. of cats"
+    let catsValue = "2"
 }
 
 extension ExperienceViewModel: UITableViewDataSource {

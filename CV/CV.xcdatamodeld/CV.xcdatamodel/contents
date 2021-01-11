@@ -5,9 +5,10 @@
         <attribute name="endDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="lastPosition" attributeType="String"/>
         <attribute name="positionDescription" attributeType="String"/>
+        <attribute name="skills" attributeType="Transformable" customClassName="[String]"/>
         <attribute name="startDate" attributeType="Date" usesScalarValueType="NO"/>
     </entity>
     <elements>
-        <element name="Work" positionX="-63" positionY="-18" width="128" height="118"/>
+        <element name="Work" positionX="-63" positionY="-18" width="128" height="133"/>
     </elements>
 </model>

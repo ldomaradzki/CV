@@ -15,6 +15,7 @@ final class Work: NSManagedObject {
     @NSManaged private var endDate: Date?
     @NSManaged fileprivate(set) var lastPosition: String
     @NSManaged fileprivate(set) var positionDescription: String
+    @NSManaged fileprivate(set) var skills: [String]
     
     /// Returns actual endDate value, unwrapped from CoreData value
     /// Note: Optionality in CoreData is not the same as in Swift, even
@@ -34,6 +35,7 @@ final class Work: NSManagedObject {
         endDate = workRemote.endDate
         lastPosition = workRemote.lastPosition
         positionDescription = workRemote.positionDescription
+        skills = workRemote.skills
     }
 }
 

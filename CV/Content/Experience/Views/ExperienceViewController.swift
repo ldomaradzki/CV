@@ -28,6 +28,9 @@ class ExperienceViewController: UIViewController {
     }()
     
     private var yearsOfExpTile = TileView()
+    private var noOfPatentsTile = TileView()
+    private var skillsTile = TileView()
+    private var noOfCatsTile = TileView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,16 +53,43 @@ class ExperienceViewController: UIViewController {
             equal(\.rightAnchor)
         ])
         
+        let width: CGFloat = 170
+        let height: CGFloat = 140
+        
         view.addSubview(yearsOfExpTile, constraints: [
             equal(\.rightAnchor, constant: -margin),
             equal(\.topAnchor, constant: margin),
-            constant(\.widthAnchor, constant: 170),
-            constant(\.heightAnchor, constant: 140)
+            constant(\.widthAnchor, constant: width),
+            constant(\.heightAnchor, constant: height)
+        ])
+        
+        view.addSubview(noOfPatentsTile, constraints: [
+            equal(\.rightAnchor, constant: -margin),
+            equal(\.topAnchor, otherView: yearsOfExpTile, \.bottomAnchor, constant: 10),
+            constant(\.widthAnchor, constant: width),
+            constant(\.heightAnchor, constant: height)
+        ])
+        
+        view.addSubview(skillsTile, constraints: [
+            equal(\.rightAnchor, constant: -margin),
+            equal(\.topAnchor, otherView: noOfPatentsTile, \.bottomAnchor, constant: 10),
+            constant(\.widthAnchor, constant: width),
+            constant(\.heightAnchor, constant: height)
+        ])
+        
+        view.addSubview(noOfCatsTile, constraints: [
+            equal(\.rightAnchor, constant: -margin),
+            equal(\.topAnchor, otherView: skillsTile, \.bottomAnchor, constant: 10),
+            constant(\.widthAnchor, constant: width),
+            constant(\.heightAnchor, constant: height)
         ])
     }
     
     func setup(_ viewModel: ExperienceViewModel) {
         tableView.dataSource = viewModel
         yearsOfExpTile.setup(value: viewModel.yearsOfExperienceValue, title: viewModel.yearsOfExperienceTitle, color: .yellowish)
+        noOfPatentsTile.setup(value: viewModel.patentsValue, title: viewModel.patentsTitle, color: .greenish)
+        skillsTile.setup(value: viewModel.skillsValue, title: viewModel.skillsTitle, color: .yellowish)
+        noOfCatsTile.setup(value: viewModel.catsValue, title: viewModel.catsTitle, color: .brightOrange)
     }
 }

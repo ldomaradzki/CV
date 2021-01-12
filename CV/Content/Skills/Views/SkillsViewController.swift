@@ -28,8 +28,8 @@ class SkillsViewController: UIViewController {
         for skill in viewModel.allSkills {
             let size = CGFloat.random(in: 110 ..< 140)
             let circle = CircleView(
-                frame: CGRect( x: CGFloat.random(in: 100 ..< 600),
-                               y: CGFloat.random(in: 120 ..< 600),
+                frame: CGRect( x: 400,
+                               y: 400,
                                width: size,
                                height: size))
             circle.setLabel(text: skill)

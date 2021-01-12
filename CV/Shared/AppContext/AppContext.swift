@@ -8,11 +8,12 @@
 import Foundation
 import CoreData
 
-protocol Context: CoreDataProvider, DataProvider, FileProvider { }
+protocol Context: CoreDataProvider, DataProvider, FileProvider, NetworkDataProvider { }
 
 class AppContext: Context {
     let coreDataService: CoreDataService
     let fileService = FileService()
+    let networkDataService = NetworkDataService()
     var dataService: DataService?
     
     init(_ container: NSPersistentContainer) {

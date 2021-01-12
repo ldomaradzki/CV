@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Used for debugging before NetworkDataProvider
 class FileService {
     let manager = FileManager.default
 }

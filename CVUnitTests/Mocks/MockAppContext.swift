@@ -10,15 +10,23 @@ import CoreData
 @testable import CV
 
 class MockAppContext: Context {
+    var mainContext: NSManagedObjectContext = .init(concurrencyType: .mainQueueConcurrencyType)
     
-}
-
-extension MockAppContext: CoreDataProvider {
-    var persistentContainer: NSPersistentContainer {
-        NSPersistentContainer()
-    }
-    
-    func saveContext() {
+    func batchInsert<T>(count: Int, handler: @escaping (Int, T) -> Void) where T : NSManagedObject {
         
     }
+    
+    func fetchAllWorks() -> [Work] {
+        []
+    }
+    
+    func data(from file: URL) -> Data? {
+        nil
+    }
+    
+    func fetchRemoteWorkData(completion: @escaping (Result<[WorkRemote], Error>) -> Void) {
+        
+    }
+    
+    
 }

@@ -25,10 +25,4 @@ extension Managed {
     }
 }
 
-extension Managed where Self: NSManagedObject {
-    static var entityName: String {
-        entity().name!
-    }
-}
-
 // grabbed from: https://www.objc.io/books/core-data/preview/

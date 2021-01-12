@@ -18,7 +18,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private var rootCoordinator: Coordinator?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
         CoreDataService.createPersistentContainer {
             [unowned self] container in
             let appContext = AppContext(container)

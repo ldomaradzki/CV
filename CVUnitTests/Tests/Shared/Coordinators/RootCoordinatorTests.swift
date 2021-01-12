@@ -34,9 +34,6 @@ class RootCoordinatorTests: XCTestCase {
         // initial selection
         XCTAssertTrue(splitVC.secondaryDisplay.viewController is AboutViewController)
         
-        coordinator.didSelect(menu: .education)
-        XCTAssertTrue(splitVC.secondaryDisplay.viewController is EducationViewController)
-        
         coordinator.didSelect(menu: .experience)
         XCTAssertTrue(splitVC.secondaryDisplay.viewController is ExperienceViewController)
         

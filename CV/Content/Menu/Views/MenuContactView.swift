@@ -24,7 +24,6 @@ class MenuContactView: UIView {
     }()
     
     private var mailImage = UIImageView(image: UIImage(named: "Mail"))
-    private var handImage = UIImageView(image: UIImage(named: "Hand"))
     
     init() {
         super.init(frame: .zero)
@@ -32,16 +31,9 @@ class MenuContactView: UIView {
         backgroundColor = .brightOrange
         layer.cornerRadius = 30
         
-        addSubview(mailImage)
-        mailImage.frame = CGRect(x: 50, y: -10, width: 81, height: 57)
-        setupAnimation()
-        
-        addSubview(handImage, constraints: [
-            equal(\.centerXAnchor),
-            equal(\.centerYAnchor),
-            constant(\.widthAnchor, constant: 58*3),
-            constant(\.heightAnchor, constant: 61*3)
-        ])
+//        addSubview(mailImage)
+//        mailImage.frame = CGRect(x: 54, y: 30, width: 81, height: 57)
+//        setupAnimation()
         
         addSubview(contactButton, constraints: [
             equal(\.centerXAnchor),
@@ -53,7 +45,7 @@ class MenuContactView: UIView {
     
     private func setupAnimation() {
         UIView.animate(withDuration: 5.0, delay: 0.0, options: [.curveEaseInOut, .repeat, .autoreverse]) {
-            self.mailImage.frame = CGRect(x: 50, y: 10, width: 81, height: 57)
+            self.mailImage.frame = CGRect(x: 54, y: 50, width: 81, height: 57)
         } completion: { _ in }
     }
     

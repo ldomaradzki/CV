@@ -17,7 +17,13 @@ class MenuViewModelTests: XCTestCase {
     
     func testTableSelectionDelegation() {
         class MockMenuDelegate: MenuDelegate {
+            var tapped: Bool = false
             var selectedMenu: MenuRow?
+            
+            func tappedContactMe() {
+                tapped = true
+            }
+            
             func didSelect(menu: MenuRow) {
                 selectedMenu = menu
             }

@@ -29,7 +29,7 @@ class TileView: UIView {
     init() {
         super.init(frame: .zero)
         
-        layer.cornerRadius = 15
+        layer.cornerRadius = 30
         
         addSubview(valueLabel, constraints: [
             equal(\.centerYAnchor, constant: -10),

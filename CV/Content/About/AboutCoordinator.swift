@@ -12,6 +12,8 @@ class AboutCoordinator: AppCoordinator {
     var childCoordinators: [Coordinator] = []
     var container: DisplayContainer
     
+    private let viewModel = AboutViewModel()
+    
     init(appContext: Context, container: DisplayContainer) {
         self.appContext = appContext
         self.container = container
@@ -19,6 +21,7 @@ class AboutCoordinator: AppCoordinator {
     
     func start() {
         let aboutViewController = AboutViewController()
+        aboutViewController.setup(viewModel)
         container.display(aboutViewController)
     }
 }

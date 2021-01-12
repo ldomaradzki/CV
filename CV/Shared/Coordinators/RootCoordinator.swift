@@ -56,8 +56,6 @@ class RootCoordinator: NSObject, AppCoordinator {
             coordinator = SkillsCoordinator(appContext: appContext, container: splitViewContainer.secondaryDisplay)
         case .experience:
             coordinator = ExperienceCoordinator(appContext: appContext, container: splitViewContainer.secondaryDisplay)
-        case .education:
-            coordinator = EducationCoordinator(appContext: appContext, container: splitViewContainer.secondaryDisplay)
         }
         
         childCoordinators.append(coordinator)

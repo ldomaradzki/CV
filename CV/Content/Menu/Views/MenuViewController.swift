@@ -90,7 +90,7 @@ class MenuViewController: UIViewController {
             equal(\.leftAnchor, constant: contactsMargin),
             equal(\.rightAnchor, constant: -contactsMargin),
             equal(\.bottomAnchor, constant: -contactsMargin),
-            constant(\.heightAnchor, constant: 200)
+            constant(\.heightAnchor, constant: 100)
         ])
     }
 }
